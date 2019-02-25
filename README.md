@@ -1,5 +1,7 @@
 # MiniAxe組立説明書
 
+_The English version of the build guide is [here](README_en.md)._
+
 ## 天キーでお買い上げいただいた方へ
 ボトムプレート用のねじが短くプレートが留められないというケースがありましたので、不具合の有無に関わらず、代替部品（ねじ、スペーサ）をお送りしています。つきましては、送付先をTwitter(@ka2hiro), Discord(@ka2hiro), Email(info@kagizaraya.jp)のいずれかまでお知らせください。
 
