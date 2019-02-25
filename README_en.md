@@ -5,7 +5,7 @@ There was a case that the screw for the bottom plate was short and the plate cou
 
 We apologize for any inconvenience. (2018/11/10)
 
-# Before build
+## Before build
 * Please be aware of injuries with soldering irons, tools, parts etc.
 * When you leave your seat during work, please confirm that the soldering iron is turned off.
 * Very small parts are included, so be careful not to lose.
@@ -38,7 +38,7 @@ Number | Name | Value | Qty | Remarks | Place
 19 | Rubber feet | | 10 |
 20 | USB cable | | 1 | Connect between left and right. |
 
-# Other required items
+## Other required items
 In order to complete the kit, the following parts must be prepared separately.
 
 * Key switch (CherryMX compatible only support. Low-profile type is not supported)
@@ -165,8 +165,8 @@ It is not necessary to press the reset switch to write the firmware for the firs
 
 Please refer to [this document](https://docs.qmk.fm/#/getting_started_build_tools) for building the environment for building firmware.
 
-## Completed！
-Congratilation!
+## Completed!
+Congratulation!
 
 ![Done](images/IMG_2819.jpg)
 
