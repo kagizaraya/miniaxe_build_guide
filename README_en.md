@@ -163,7 +163,7 @@ $ make miniaxe: default: dfu
 
 It is not necessary to press the reset switch to write the firmware for the first time.
 
-Please refer to [this document] (https://docs.qmk.fm/#/ getting_started_build_tools) for building the environment for building firmware.
+Please refer to [this document](https://docs.qmk.fm/#/getting_started_build_tools) for building the environment for building firmware.
 
 ## Completed！
 Congratilation!
