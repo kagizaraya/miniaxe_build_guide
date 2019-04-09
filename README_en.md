@@ -70,7 +70,7 @@ In addition, you may also prepare the following as necessary.
 For the QFP package soldering, this [video](https://youtu.be/b9FC9fAlfQE?t=1172) may be helpful.
 
 ## Solder crystal oscilators
-1. Align the long side of the crystal oscillator (which may be either long side) so that it sits parallel the Y1 marking on the board and place it at the center of the four pads.
+1. Align the long side of the crystal oscillator (which may be either long side) so that it sits parallel with the Y1 marking on the board and place it at the center of the four pads.
 2. Since only a little bit of the PCB pads can be seen at the corners of the crystal oscillator, apply solder while warming the corners of the crystal.
 
 ![Crystal](images/IMG_2796.jpg)
@@ -83,7 +83,7 @@ This [video](https://www.youtube.com/watch?v=14fJTgFg03M) may be helpful for sol
 ![Resistor](images/IMG_2802.jpg)
 
 ## Solder capacitors
-1. The included capacitors do not have values printed on them. Be careful 
+1. The included capacitors do not have values printed on them. Be careful. 
 
 ![Capacitor](images/IMG_2803.jpg)
 
@@ -139,7 +139,7 @@ If it is not recognized as a USB device, please double check the schematic to se
 ![Metal standoffs](images/IMG_2814.jpg)
 
 ## Assemble the bottom plate
-1. Insert the M3 x 3 mm screw into the bottom plate, select the diagonal screw with respect to the metal standoff on the PCB (in the order of upper left → lower right → upper right → lower left etc.) and tighten evenly and gradually. _If tightening tightly one by one, the last screw may not be tightened._
+1. Insert an M3 x 3 mm screw into the bottom plate and turn a few times. Select the diagonally opposite screw and turn a few times (e.g. upper left → lower right → upper right → lower left etc.). Repeat until all screws are loosely attached. **Do not completely tighten the first screw and then do another one. Tighten evenly and gradually.**
 
 ![Bottom plate](images/IMG_2815.jpg)
 
@@ -148,18 +148,18 @@ If it is not recognized as a USB device, please double check the schematic to se
 ![Rubber feet](images/IMG_2816.jpg)
 
 ## Install key switches and key caps
-1. Install the key switches and key caps of your choice. (_Only Cherry MX compatible switch is supported, please note that low profile type is not supported._)
-2. _Since the pin of the key switch is easy to bend, please make sure that it is straight. Also, be careful as SW7 and SW8 are oriented opposite to the others._
+1. Install the key switches and key caps of your choice. (_Only Cherry MX-compatible switches are supported on this version of the MiniAxe. The "MiniAxe LP" supports low-profile switches._)
+2. _Ensure key switch pin are straight before inserting. **Remember that SW7 and SW8 are oriented opposite to the others.**_
 
 ## Write firmware
 The firmware uses QMK. Please clone the following repository.
 
 [qmk_firmware](https://github.com/qmk/qmk_firmware)
 
-After cloning, move to the directory of the local repository and execute the following command, the standby state will be entered to write the firmware, please connect the keyboard. If the keyboard is already connected, writing will begin.
+After cloning, move to the directory of the local repository and execute the following command. After building, the program will enter a standby state. When that happens, please connect the keyboard. If the keyboard is already connected, writing will begin.
 
 ~~~
-$ make miniaxe: default: dfu
+$ make miniaxe:default:dfu
 ~~~
 
 It is not necessary to press the reset switch to write the firmware for the first time.
@@ -167,7 +167,7 @@ It is not necessary to press the reset switch to write the firmware for the firs
 Please refer to [this document](https://docs.qmk.fm/#/getting_started_build_tools) for building the environment for building firmware.
 
 ## Completed!
-Congratulation!
+Congratulations!
 
 ![Done](images/IMG_2819.jpg)
 
