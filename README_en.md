@@ -1,14 +1,14 @@
 # MiniAxe build guide
 
 ## To people who purchased at Ten-key #1
-There was a case that the screw for the bottom plate was short and the plate could not be fastened, so we send alternative parts (screws, spacers) regardless of whether there is a problem. Please let us know to Twitter (@ka2hiro), Discord (@ka2hiro), Email (info@kagizaraya.jp).
+There was a case that the screw for the bottom plate was short and the plate could not be fastened, so we sent alternative parts (screws, spacers) regardless of whether there was a problem. Please let us know on Twitter (@ka2hiro), Discord (@ka2hiro), or Email (info@kagizaraya.jp).
 
 We apologize for any inconvenience. (2018/11/10)
 
 ## Before build
 * Please be aware of injuries with soldering irons, tools, parts etc.
 * When you leave your seat during work, please confirm that the soldering iron is turned off.
-* Very small parts are included, so be careful not to lose.
+* Very small parts are included, so be careful not to lose any.
 
 ## Confirm contents
 The following parts are included in the kit. Please check whether there is any shortage before work.
@@ -67,56 +67,57 @@ In addition, you may also prepare the following as necessary.
 
 ![MPU](images/IMG_2794.jpg)
 
-For the QFP package soldering, this [movie] (https://www.youtube.com/watch?v=-8SRkSjkZ8A) may be helpful.
+For the QFP package soldering, this [video](https://youtu.be/b9FC9fAlfQE?t=1172) may be helpful.
 
 ## Solder crystal oscilators
-1. Align the long side of the crystal oscillator (which may be either long side) so that it comes to the position of the part number (Y1) on the board and place it at the center of the four pads.
-2. Since the terminal can be seen only a little at the corner of the crystal oscillator, solder is poured while warming it at the tip of the crystal.
+1. Align the long side of the crystal oscillator (which may be either long side) so that it sits parallel the Y1 marking on the board and place it at the center of the four pads.
+2. Since only a little bit of the PCB pads can be seen at the corners of the crystal oscillator, apply solder while warming the corners of the crystal.
 
 ![Crystal](images/IMG_2796.jpg)
 
-This [movie] (https://www.youtube.com/watch?v=14fJTgFg03M) may be helpful for soldering SMD crystal oscillator.
+This [video](https://www.youtube.com/watch?v=14fJTgFg03M) may be helpful for soldering SMD crystal oscillator.
 
 ## Solder resistors
-1. Resistors and capacitors are really small so they lose sight of it quickly. When soldering, remove them one at a time from the tape.
+1. SMD resistors and capacitors are very small and are easy to lose. During assembly, completely solder one component before removing the next one from the tape.
 
-![Registor](images/IMG_2802.jpg)
+![Resistor](images/IMG_2802.jpg)
 
 ## Solder capacitors
-1. Since capacitors are not written with numbers or letters on the parts themselves, it is impossible to distinguish them by looking at things with different values, so be careful.
+1. The included capacitors do not have values printed on them. Be careful 
 
 ![Capacitor](images/IMG_2803.jpg)
 
 ## Solder schottky diodes
-1. The diode has a mounting orientation. Align the part of one side of the package that is painted white and bandlike to the position of the vertical bar of the diode symbol on the board.
+1. The diode must be installed in the correct orientation. Align the part so that the white band is on the same side as the vertical bar of the diode symbol on the board.
 
 ![Diode](images/IMG_2775.jpg)
 
 ## Solder USB connectors
-1. If soldering from the pin part first rather than the outer through hole part, it can be installed without misalignment.
+1. Solder the 5 central pins first, THEN the 4 outer tabs to ensure proper alignment.
 
 ![USBConnector](images/IMG_2779.jpg)
 
 ## Solder tact switches
-1. Since the tactile switch has a little metallic part on the side, apply a soldering iron to that part and let the solder flow.
+1. Since the tactile switch has a little metallic part on the side, heat that area with a soldering iron and let the solder flow.
 
 ![TactSwitch](images/IMG_2806.jpg)
 
-## Solder sockets
-1. _Be careful because there are 2 places (SW 7, SW 8) in the center of the PCB where the direction to attach the socket is different from the others._
-2. If you install it in the wrong direction, the hole in the middle where the key switch is attached will be blocked.
-3. First, solder only one side of all the sockets, then check if they are misdirected, then solder the rest, it will be hard to fail.
+## Solder hotswap sockets
+1. **CAUTION**  
+   _There are 2 places (SW 7, SW 8) in the center of the PCB where the orientation of the socket is different from the others._  
+   _If you install it in the wrong direction, the hole in the middle where the key switch is attached will be blocked._
+2. Solder those two places first, check their orientation/placement, THEN solder the rest to avoid any issues.
 
 ![Socket](images/IMG_2807.jpg)
 
 ## Check whether the soldering is properly done
 Refer to the schematic ([left side](files/MiniAxeLeft.pdf), [right side](files/MiniAxeRight.pdf)) and check whether soldering is correctly done.
 
-Before connecting to the computer, at least check the followings.
+Before connecting to the computer, at least check the following.
 
 1. Check that there is no short circuit between UVCC - GND and VCC - GND.
 2. Make sure the MPU pins are not bridged.
-4. Make sure the USB connector pins are not bridged.
+3. Make sure the USB connector pins are not bridged.
 
 ## Verify that it is recognized as a USB device
 Connect the keyboard to the computer and confirm that it is recognized as a USB device.
