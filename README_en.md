@@ -149,7 +149,7 @@ If it is not recognized as a USB device, please double check the schematic to se
 
 ## Install key switches and key caps
 1. Install the key switches and key caps of your choice. (_Only Cherry MX-compatible switches are supported on this version of the MiniAxe. The "MiniAxe LP" supports low-profile switches._)
-2. _Ensure key switch pin are straight before inserting. **Remember that SW7 and SW8 are oriented opposite to the others.**_
+2. _Ensure key switch pins are straight before inserting. **Remember that SW7 and SW8 are oriented opposite to the others.**_
 
 ## Write firmware
 The firmware uses QMK. Please clone the following repository.
