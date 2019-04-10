@@ -19,7 +19,7 @@ Number | Name | Value | Qty | Remarks | Place
 :----|:--------|:-----|:----|:-----------------|:-------
 1 | PCB | | 2 | 1 for left hand, 1 for right hand |
 2 | Resistance | 10 kΩ | 5 | 1 spare, colored with green sticker or marker<sup> [1] (#marker)</sup>, marked "103" on the package. | R1, R4
-3 | Resistance | 22 Ω | 5 | 1 spare, colored with yellow sticker or marker<sup> [1] (#marker)</sup>, marked "220" on the package. | R2, 
+3 | Resistance | 22 Ω | 5 | 1 spare, colored with yellow sticker or marker<sup> [1] (#marker)</sup>, marked "220" on the package. | R2, R3
 4 | Capacitor | 1 μF | 5 | 1 spare, colored with blue sticker or marker<sup>[1](#marker)</sup> | C1, C3
 5 | Capacitor | 0.1 μF | 3 | 1 spare, no sticker or maker. | C2
 6 | Capacitor | 22pF | 5 | 1 spare, colored with red sticker or marker<sup>[1](#marker)</sup> | C4, C5
