@@ -18,16 +18,16 @@ The following parts are included in the kit. Please check whether there is any s
 Number | Name | Value | Qty | Remarks | Place
 :----|:--------|:-----|:----|:-----------------|:-------
 1 | PCB | | 2 | 1 for left hand, 1 for right hand |
-2 | Resistance | 10 kΩ | 5 | 1 spare, colored with green sticker or marker<sup> [1] (#marker)</sup>, marked "103" on the package. | R1, R4
-3 | Resistance | 22 Ω | 5 | 1 spare, colored with yellow sticker or marker<sup> [1] (#marker)</sup>, marked "220" on the package. | R2, R3
-4 | Capacitor | 1 μF | 5 | 1 spare, colored with blue sticker or marker<sup>[1](#marker)</sup> | C1, C3
-5 | Capacitor | 0.1 μF | 3 | 1 spare, no sticker or maker. | C2
-6 | Capacitor | 22pF | 5 | 1 spare, colored with red sticker or marker<sup>[1](#marker)</sup> | C4, C5
-7 | Schottky diode | | 2 | | D 1
-8 | Crystal oscillator | 16 MHz | 2 | | Y 1
+2 | Resistor | 10 kΩ | 5 | 1 spare, colored with green sticker or marker on tape package<sup>[1](#marker)</sup. Marked "103" on the component. | R1, R4
+3 | Resistor | 22 Ω | 5 | 1 spare, colored with yellow sticker or marker on tape package<sup>[1](#marker)</sup. Marked "220" on the component. | R2, R3
+4 | Capacitor | 1 μF | 5 | 1 spare, colored with blue sticker or marker on tape package<sup>[1](#marker)</sup. | C1, C3
+5 | Capacitor | 0.1 μF | 3 | 1 spare, no sticker or marker. | C2
+6 | Capacitor | 22pF | 5 | 1 spare, colored with red sticker or marker on tape package<sup>[1](#marker)</sup> | C4, C5
+7 | Schottky diode | | 2 | | D1
+8 | Crystal oscillator | 16 MHz | 2 | | Y1
 9 | MPU | ATMEGA 32 U 4 | 2 | | U1
-10 | USB connector | Micro B female | 4 | | J 1, J 2
-11 | Tact switch | | 2 | | SW 20
+10 | USB connector | Micro B female | 4 | | J1, J2
+11 | Tact switch | | 2 | | SW20
 12 | Switch socket | | 36 | | SW1 - SW18
 13 | M2 screw | 8 mm | 8 |
 14 | M2 screw <sup>[2](#screw)</sup> | 4 mm | 8 |
@@ -53,7 +53,7 @@ In order to build, the following tools are required at minimum.
 * Tweezers
 * Phillips head screwdriver
 * Magnifier
-* Flux
+* Flux (Seriously. Fine-pitch SMD soldering is no fun without flux.)
 
 In addition, you may also prepare the following as necessary.
 
