@@ -18,9 +18,9 @@ The following parts are included in the kit. Please check whether there is any s
 Number | Name | Value | Qty | Remarks | Place
 :----|:--------|:-----|:----|:-----------------|:-------
 1 | PCB | | 2 | 1 for left hand, 1 for right hand |
-2 | Resistor | 10 kΩ | 5 | 1 spare, colored with green sticker or marker on tape package<sup>[1](#marker)</sup. Marked "103" on the component. | R1, R4
-3 | Resistor | 22 Ω | 5 | 1 spare, colored with yellow sticker or marker on tape package<sup>[1](#marker)</sup. Marked "220" on the component. | R2, R3
-4 | Capacitor | 1 μF | 5 | 1 spare, colored with blue sticker or marker on tape package<sup>[1](#marker)</sup. | C1, C3
+2 | Resistor | 10 kΩ | 5 | 1 spare, colored with green sticker or marker on tape package<sup>[1](#marker)</sup>. Marked "103" on the component. | R1, R4
+3 | Resistor | 22 Ω | 5 | 1 spare, colored with yellow sticker or marker on tape package<sup>[1](#marker)</sup>. Marked "220" on the component. | R2, R3
+4 | Capacitor | 1 μF | 5 | 1 spare, colored with blue sticker or marker on tape package<sup>[1](#marker)</sup>. | C1, C3
 5 | Capacitor | 0.1 μF | 3 | 1 spare, no sticker or marker. | C2
 6 | Capacitor | 22pF | 5 | 1 spare, colored with red sticker or marker on tape package<sup>[1](#marker)</sup> | C4, C5
 7 | Schottky diode | | 2 | | D1
