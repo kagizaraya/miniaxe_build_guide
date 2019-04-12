@@ -119,13 +119,16 @@ Before connecting to the computer, at least check the following.
 2. Make sure the MPU pins are not bridged.
 3. Make sure the USB connector pins are not bridged.
 
-## Verify that it is recognized as a USB device
-Connect the keyboard to the computer and confirm that it is recognized as a USB device.
+## Verify that it is recognized as a USB device  
+1. Do not join the two sides of the keyboard yet.  
+2. Insert a cable into the female microUSB port labeled J1 on one side of the keyboard only. Connect the other end of the cable to your computer.  
+3. Confirm that it is recognized as a USB device. Unplug and repeat for the other side of the keyboard.  
 
 * For Mac, start "System Information" and check whether the device named "ATm32U4DFU" is visible.
 ![System Information](images/system-info.png)
 
-* For Windows, I have not tried it because I do not have the environment at hand, but it seems to appear as "ATm32U4DFU" in the device manager.
+* For Windows, start "Device Manager" and under "libusb-win32 devices", check whether the device named "ATmega32U4" is visible.
+![System Information](images/device-manager.png)
 
 If it is not recognized as a USB device, please double check the schematic to see if all parts are properly soldered.
 
@@ -147,9 +150,11 @@ If it is not recognized as a USB device, please double check the schematic to se
 1. Attach the rubber feet on the bottom plate.
 ![Rubber feet](images/IMG_2816.jpg)
 
-## Install key switches and key caps
-1. Install the key switches and key caps of your choice. (_Only Cherry MX-compatible switches are supported on this version of the MiniAxe. The "MiniAxe LP" supports low-profile switches._)
-2. _Ensure key switch pins are straight before inserting. **Remember that SW7 and SW8 are oriented opposite to the others.**_
+## Install key switches and caps, USB cables
+1. Install the key switches and key caps of your choice.  
+* Only Cherry MX-compatible switches are supported on this version of the MiniAxe. The "MiniAxe LP" supports low-profile switches.  
+* Ensure key switch pins are straight before inserting. **Remember that SW7 and SW8 are oriented opposite to the others.**  
+2. Join the two halves with the male-male microUSB cable. Connect the microUSB port J2 on one side to J2 on the other side.
 
 ## Write firmware
 The firmware uses QMK. Please clone the following repository.
