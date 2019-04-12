@@ -127,7 +127,7 @@ Before connecting to the computer, at least check the following.
 * For Mac, start "System Information" and check whether the device named "ATm32U4DFU" is visible.
 ![System Information](images/system-info.png)
 
-* For Windows, start "Device Manager" and under "libusb-win32 devices", check whether the device named "ATmega32U4" is visible.
+* For Windows, start "Device Manager" and under "libusb-win32 devices", check whether the device named "ATmega32U4" is visible.  
 ![System Information](images/device-manager.png)
 
 If it is not recognized as a USB device, please double check the schematic to see if all parts are properly soldered.
@@ -161,13 +161,15 @@ The firmware uses QMK. Please clone the following repository.
 
 [qmk_firmware](https://github.com/qmk/qmk_firmware)
 
-After cloning, move to the directory of the local repository and execute the following command. After building, the program will enter a standby state. When that happens, please connect the keyboard. If the keyboard is already connected, writing will begin.
+After cloning, move to the directory of the local repository and execute the following command. 
 
 ~~~
 $ make miniaxe:default:dfu
 ~~~
 
+After building, the program will enter a standby state. When that happens, please connect the keyboard. If the keyboard is already connected, writing will begin. 
 It is not necessary to press the reset switch to write the firmware for the first time.
+Repeat for the other side of the keyboard.
 
 Please refer to [this document](https://docs.qmk.fm/#/getting_started_build_tools) for building the environment for building firmware.
 
