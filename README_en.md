@@ -1,14 +1,14 @@
 # MiniAxe build guide
 
 ## To people who purchased at Ten-key #1
-There was a case that the screw for the bottom plate was short and the plate could not be fastened, so we send alternative parts (screws, spacers) regardless of whether there is a problem. Please let us know to Twitter (@ka2hiro), Discord (@ka2hiro), Email (info@kagizaraya.jp).
+There was a case that the screw for the bottom plate was short and the plate could not be fastened, so we sent alternative parts (screws, spacers) regardless of whether there was a problem. Please let us know on Twitter (@ka2hiro), Discord (@ka2hiro), or Email (info@kagizaraya.jp).
 
 We apologize for any inconvenience. (2018/11/10)
 
 ## Before build
 * Please be aware of injuries with soldering irons, tools, parts etc.
 * When you leave your seat during work, please confirm that the soldering iron is turned off.
-* Very small parts are included, so be careful not to lose.
+* Very small parts are included, so be careful not to lose any.
 
 ## Confirm contents
 The following parts are included in the kit. Please check whether there is any shortage before work.
@@ -18,16 +18,16 @@ The following parts are included in the kit. Please check whether there is any s
 Number | Name | Value | Qty | Remarks | Place
 :----|:--------|:-----|:----|:-----------------|:-------
 1 | PCB | | 2 | 1 for left hand, 1 for right hand |
-2 | Resistance | 10 kΩ | 5 | 1 spare, colored with green sticker or marker<sup> [1] (#marker)</sup>, marked "103" on the package. | R1, R4
-3 | Resistance | 22 Ω | 5 | 1 spare, colored with yellow sticker or marker<sup> [1] (#marker)</sup>, marked "220" on the package. | R2, 
-4 | Capacitor | 1 μF | 5 | 1 spare, colored with blue sticker or marker<sup>[1](#marker)</sup> | C1, C3
-5 | Capacitor | 0.1 μF | 3 | 1 spare, no sticker or maker. | C2
-6 | Capacitor | 22pF | 5 | 1 spare, colored with red sticker or marker<sup>[1](#marker)</sup> | C4, C5
-7 | Schottky diode | | 2 | | D 1
-8 | Crystal oscillator | 16 MHz | 2 | | Y 1
+2 | Resistor | 10 kΩ | 5 | 1 spare, colored with green sticker or marker on tape package<sup>[1](#marker)</sup>. Marked "103" on the component. | R1, R4
+3 | Resistor | 22 Ω | 5 | 1 spare, colored with yellow sticker or marker on tape package<sup>[1](#marker)</sup>. Marked "220" on the component. | R2, R3
+4 | Capacitor | 1 μF | 5 | 1 spare, colored with blue sticker or marker on tape package<sup>[1](#marker)</sup>. | C1, C3
+5 | Capacitor | 0.1 μF | 3 | 1 spare, no sticker or marker. | C2
+6 | Capacitor | 22pF | 5 | 1 spare, colored with red sticker or marker on tape package<sup>[1](#marker)</sup> | C4, C5
+7 | Schottky diode | | 2 | | D1
+8 | Crystal oscillator | 16 MHz | 2 | | Y1
 9 | MPU | ATMEGA 32 U 4 | 2 | | U1
-10 | USB connector | Micro B female | 4 | | J 1, J 2
-11 | Tact switch | | 2 | | SW 20
+10 | USB connector | Micro B female | 4 | | J1, J2
+11 | Tact switch | | 2 | | SW20
 12 | Switch socket | | 36 | | SW1 - SW18
 13 | M2 screw | 8 mm | 8 |
 14 | M2 screw <sup>[2](#screw)</sup> | 4 mm | 8 |
@@ -53,7 +53,7 @@ In order to build, the following tools are required at minimum.
 * Tweezers
 * Phillips head screwdriver
 * Magnifier
-* Flux
+* Flux (Seriously. Fine-pitch SMD soldering is no fun without flux.)
 
 In addition, you may also prepare the following as necessary.
 
@@ -67,64 +67,68 @@ In addition, you may also prepare the following as necessary.
 
 ![MPU](images/IMG_2794.jpg)
 
-For the QFP package soldering, this [movie] (https://www.youtube.com/watch?v=-8SRkSjkZ8A) may be helpful.
+For the QFP package soldering, this [video](https://youtu.be/b9FC9fAlfQE?t=1172) may be helpful.
 
 ## Solder crystal oscilators
-1. Align the long side of the crystal oscillator (which may be either long side) so that it comes to the position of the part number (Y1) on the board and place it at the center of the four pads.
-2. Since the terminal can be seen only a little at the corner of the crystal oscillator, solder is poured while warming it at the tip of the crystal.
+1. Align the long side of the crystal oscillator (which may be either long side) so that it sits parallel with the Y1 marking on the board and place it at the center of the four pads.
+2. Since only a little bit of the PCB pads can be seen at the corners of the crystal oscillator, apply solder while warming the corners of the crystal.
 
 ![Crystal](images/IMG_2796.jpg)
 
-This [movie] (https://www.youtube.com/watch?v=14fJTgFg03M) may be helpful for soldering SMD crystal oscillator.
+This [video](https://www.youtube.com/watch?v=14fJTgFg03M) may be helpful for soldering SMD crystal oscillator.
 
 ## Solder resistors
-1. Resistors and capacitors are really small so they lose sight of it quickly. When soldering, remove them one at a time from the tape.
+1. SMD resistors and capacitors are very small and are easy to lose. During assembly, completely solder one component before removing the next one from the tape.
 
-![Registor](images/IMG_2802.jpg)
+![Resistor](images/IMG_2802.jpg)
 
 ## Solder capacitors
-1. Since capacitors are not written with numbers or letters on the parts themselves, it is impossible to distinguish them by looking at things with different values, so be careful.
+1. The included capacitors do not have values printed on them. Be careful. 
 
 ![Capacitor](images/IMG_2803.jpg)
 
 ## Solder schottky diodes
-1. The diode has a mounting orientation. Align the part of one side of the package that is painted white and bandlike to the position of the vertical bar of the diode symbol on the board.
+1. The diode must be installed in the correct orientation. Align the part so that the white band is on the same side as the vertical bar of the diode symbol on the board.
 
 ![Diode](images/IMG_2775.jpg)
 
 ## Solder USB connectors
-1. If soldering from the pin part first rather than the outer through hole part, it can be installed without misalignment.
+1. Solder the 5 central pins first, THEN the 4 outer tabs to ensure proper alignment.
 
 ![USBConnector](images/IMG_2779.jpg)
 
 ## Solder tact switches
-1. Since the tactile switch has a little metallic part on the side, apply a soldering iron to that part and let the solder flow.
+1. Since the tactile switch has a little metallic part on the side, heat that area with a soldering iron and let the solder flow.
 
 ![TactSwitch](images/IMG_2806.jpg)
 
-## Solder sockets
-1. _Be careful because there are 2 places (SW 7, SW 8) in the center of the PCB where the direction to attach the socket is different from the others._
-2. If you install it in the wrong direction, the hole in the middle where the key switch is attached will be blocked.
-3. First, solder only one side of all the sockets, then check if they are misdirected, then solder the rest, it will be hard to fail.
+## Solder hotswap sockets
+1. **CAUTION**  
+   _There are 2 places (SW 7, SW 8) in the center of the PCB where the orientation of the socket is different from the others._  
+   _If you install it in the wrong direction, the hole in the middle where the key switch is attached will be blocked._
+2. Solder those two places first, check their orientation/placement, THEN solder the rest to avoid any issues.
 
 ![Socket](images/IMG_2807.jpg)
 
 ## Check whether the soldering is properly done
 Refer to the schematic ([left side](files/MiniAxeLeft.pdf), [right side](files/MiniAxeRight.pdf)) and check whether soldering is correctly done.
 
-Before connecting to the computer, at least check the followings.
+Before connecting to the computer, at least check the following.
 
 1. Check that there is no short circuit between UVCC - GND and VCC - GND.
 2. Make sure the MPU pins are not bridged.
-4. Make sure the USB connector pins are not bridged.
+3. Make sure the USB connector pins are not bridged.
 
-## Verify that it is recognized as a USB device
-Connect the keyboard to the computer and confirm that it is recognized as a USB device.
+## Verify that it is recognized as a USB device  
+1. Do not join the two sides of the keyboard yet.  
+2. Insert a cable into the female microUSB port labeled J1 on one side of the keyboard only. Connect the other end of the cable to your computer.  
+3. Confirm that it is recognized as a USB device. Unplug and repeat for the other side of the keyboard.  
 
 * For Mac, start "System Information" and check whether the device named "ATm32U4DFU" is visible.
 ![System Information](images/system-info.png)
 
-* For Windows, I have not tried it because I do not have the environment at hand, but it seems to appear as "ATm32U4DFU" in the device manager.
+* For Windows, start "Device Manager" and under "libusb-win32 devices", check whether the device named "ATmega32U4" is visible.  
+![System Information](images/device-manager.png)
 
 If it is not recognized as a USB device, please double check the schematic to see if all parts are properly soldered.
 
@@ -138,7 +142,7 @@ If it is not recognized as a USB device, please double check the schematic to se
 ![Metal standoffs](images/IMG_2814.jpg)
 
 ## Assemble the bottom plate
-1. Insert the M3 x 3 mm screw into the bottom plate, select the diagonal screw with respect to the metal standoff on the PCB (in the order of upper left → lower right → upper right → lower left etc.) and tighten evenly and gradually. _If tightening tightly one by one, the last screw may not be tightened._
+1. Insert an M3 x 3 mm screw into the bottom plate and turn a few times. Select the diagonally opposite screw and turn a few times (e.g. upper left → lower right → upper right → lower left etc.). Repeat until all screws are loosely attached. **Do not completely tighten the first screw and then do another one. Tighten evenly and gradually.**
 
 ![Bottom plate](images/IMG_2815.jpg)
 
@@ -146,27 +150,31 @@ If it is not recognized as a USB device, please double check the schematic to se
 1. Attach the rubber feet on the bottom plate.
 ![Rubber feet](images/IMG_2816.jpg)
 
-## Install key switches and key caps
-1. Install the key switches and key caps of your choice. (_Only Cherry MX compatible switch is supported, please note that low profile type is not supported._)
-2. _Since the pin of the key switch is easy to bend, please make sure that it is straight. Also, be careful as SW7 and SW8 are oriented opposite to the others._
+## Install key switches and caps, USB cables
+1. Install the key switches and key caps of your choice.  
+* Only Cherry MX-compatible switches are supported on this version of the MiniAxe. The "MiniAxe LP" supports low-profile switches.  
+* Ensure key switch pins are straight before inserting. **Remember that SW7 and SW8 are oriented opposite to the others.**  
+2. Join the two halves with the male-male microUSB cable. Connect the microUSB port J2 on one side to J2 on the other side.
 
 ## Write firmware
 The firmware uses QMK. Please clone the following repository.
 
 [qmk_firmware](https://github.com/qmk/qmk_firmware)
 
-After cloning, move to the directory of the local repository and execute the following command, the standby state will be entered to write the firmware, please connect the keyboard. If the keyboard is already connected, writing will begin.
+After cloning, move to the directory of the local repository and execute the following command. 
 
 ~~~
-$ make miniaxe: default: dfu
+$ make miniaxe:default:dfu
 ~~~
 
+After building, the program will enter a standby state. When that happens, please connect the keyboard. If the keyboard is already connected, writing will begin. 
 It is not necessary to press the reset switch to write the firmware for the first time.
+Repeat for the other side of the keyboard.
 
 Please refer to [this document](https://docs.qmk.fm/#/getting_started_build_tools) for building the environment for building firmware.
 
 ## Completed!
-Congratulation!
+Congratulations!
 
 ![Done](images/IMG_2819.jpg)
 
