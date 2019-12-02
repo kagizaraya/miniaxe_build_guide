@@ -2,7 +2,7 @@
 
 _The English version of the build guide is [here](README_en.md)._
 
-[天キー Vol.1 でお買い上げいただいた方へのお知らせ](tenkey.md)
+[天キー Vol.1 でお買い上げいただいた方へのお知らせ](tenkey_vol1.md)
 
 ## 組み立ての前に
 * はんだごてや工具、部品等でのケガに注意してください。
