@@ -1,9 +1,6 @@
 # MiniAxe build guide
 
-## To people who purchased at Ten-key #1
-There was a case that the screw for the bottom plate was short and the plate could not be fastened, so we send alternative parts (screws, spacers) regardless of whether there is a problem. Please let us know to Twitter (@ka2hiro), Discord (@ka2hiro), Email (info@kagizaraya.jp).
-
-We apologize for any inconvenience. (2018/11/10)
+[To people who purchased at Ten-key Vol.1](tenkey_vol1_en.md)
 
 ## Before build
 * Please be aware of injuries with soldering irons, tools, parts etc.
@@ -12,6 +9,10 @@ We apologize for any inconvenience. (2018/11/10)
 
 ## Confirm contents
 The following parts are included in the kit. Please check whether there is any shortage before work.
+
+The soldered kit includes only the part number (13) and later, so please check.
+
+
 
 ![Contents of kit](images/IMG_2761.jpg)
 
@@ -60,6 +61,14 @@ In addition, you may also prepare the following as necessary.
 * Flux remover
 * Solder wick
 * Multimeter
+
+
+
+# Buid procedure
+
+For the soldered kit, proceed with building from the item [Verify that it is recognized as a USB device](Verify that it is recognized as a USB device).
+
+
 
 ## Solder MPUs
 1. Place the ● mark (pin 1 marking) on the MPU aligned with the ○ mark on the board.
@@ -123,8 +132,8 @@ Connect the keyboard to the computer and confirm that it is recognized as a USB 
 
 * For Mac, start "System Information" and check whether the device named "ATm32U4DFU" is visible.
 ![System Information](images/system-info.png)
-
 * For Windows, I have not tried it because I do not have the environment at hand, but it seems to appear as "ATm32U4DFU" in the device manager.
+* For the soldered kit, make sure that "MiniAxe" is visible on Mac or Windows.
 
 If it is not recognized as a USB device, please double check the schematic to see if all parts are properly soldered.
 
@@ -151,6 +160,8 @@ If it is not recognized as a USB device, please double check the schematic to se
 2. _Since the pin of the key switch is easy to bend, please make sure that it is straight. Also, be careful as SW7 and SW8 are oriented opposite to the others._
 
 ## Write firmware
+__For the soldered kit, the default keymap firmware is already written.__
+
 The firmware uses QMK. Please clone the following repository.
 
 [qmk_firmware](https://github.com/qmk/qmk_firmware)
@@ -172,6 +183,6 @@ Congratulation!
 
 ---
 <a name="marker">1</a>: Some kits are colored with markers.  
-<a name="screw">2</a>: In the Ten-key version M2 x 3 mm was included but it was changed to 4 mm.  
-<a name="metal_spacer">3</a>: Although the M2 metal standoff 3 mm was included in the Ten-key version, it was replaced by 3.5 mm.  
+<a name="screw">2</a>: In the Ten-key jjjj version M2 x 3 mm was included but it was changed to 4 mm.
+<a name="metal_spacer">3</a>: Although the M2 metal standoff 3 mm was included in the Ten-key Vol.1 version, it was replaced by 3.5 mm.
 
