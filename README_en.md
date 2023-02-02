@@ -144,6 +144,9 @@ Before connecting to the computer, at least check the following.
 If it is not recognized as a USB device, please double check the schematic to see if all parts are properly soldered.
 
 ## Assemble the top plate
+
+**The cut surface of the key switch hole on the top plate is tapered due to the characteristics of the laser cutter, so the size of the hole is slightly different on the front and back sides. Try mounting the key switch to be installed on the front and back sides of the top plate, and treat the side that is easier to mount as the front side.**
+
 1. Insert M2 x 8 mm screws into the top plate and fix screws with a masking tape.
 ![Top plate](images/IMG_2811.jpg)
 2. Turn the top plate over and attach resin standoffs.
@@ -162,8 +165,12 @@ If it is not recognized as a USB device, please double check the schematic to se
 ![Rubber feet](images/IMG_2816.jpg)
 
 ## Install key switches and caps, USB cables
+
+**The cut surface of the key switch hole on the top plate is tapered due to the characteristics of the laser cutter, so the size of the hole is slightly different on the front and back sides. Try mounting the key switch to be installed on the front and back sides of the top plate, and treat the side that is easier to mount as the front side.**
+
 1. Install the key switches and key caps of your choice.  
 * Only Cherry MX-compatible switches are supported on this version of the MiniAxe. The "MiniAxe LP" supports low-profile switches.  
+* If the keyswitch is difficult to install on the top plate, try changing the front and back sides of the top plate. Also, inserting something between the top plate and the board to support the top plate so that it does not bend can prevent the top plate from cracking. Install the top plate carefully without forcing it into place.
 * Ensure key switch pins are straight before inserting. **Remember that SW7 and SW8 are oriented opposite to the others.**  
 2. Join the two halves with the male-male microUSB cable. Connect the microUSB port J2 on one side to J2 on the other side.
 
