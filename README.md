@@ -172,21 +172,80 @@ USBデバイスとして認識されない場合は、全ての部品が正し�
 3. _キースイッチのピンは曲がりやすいので、まっすぐになっていることを確認してから取り付けてください。また、 SW7とSW8は向きが他とは反対になっているので、注意してください。_
 
 ## ファームウェアを書き込む
-__はんだ済みキットでは、デフォルトキーマップが既に書き込まれています。__
 
-ファームウェアはQMKを利用します。以下のリポジトリをクローンしてください。
+__はんだ済みキットでは、デフォルトキーマップが既に書き込まれていますので、このステップは必要ありません。__
 
-[qmk_firmware](https://github.com/qmk/qmk_firmware)
+ファームウェアの書き込みは、以下の2通りの方法があります。キーマップの書き換え以外にファームウェアのカスタマイズが必要なければ、QMK Toolboxを利用する方法が簡単でおすすめです。
 
-クローンしたら、ローカルリポジトリのディレクトリへ移動し、以下のコマンドを実行すると、ファームウェアを書き込むために待機状態になりますので、キーボードを接続してください。すでにキーボードが接続されている場合は、そのまま書き込みが始まります。
+### QMK Toolboxを利用してファームウェアを書き込む
 
-~~~
-$ make miniaxe:default:dfu
-~~~
+1. [QMK Toolbox](https://github.com/qmk/qmk_toolbox/releases)の最新版をダウンロード、インストールします。
+    Windows版は、アプリケーションのみのqmk_toolsbox.exeか、インストーラ込みのqmk_toolbox_install.exeのどちらかをダウンロードします。
+    Mac版は、アプリケーションのみのQMK.Toolbox.app.zipか、インストーラ込みのQMK.Toolbox.pkgのどちらかをダウンロードします。
+2. 以下のリンクからMiniAxeのファームウェアをダウンロードします。
+    [miniaxe_via.hex](https://github.com/kagizaraya/miniaxe_build_guide/releases/download/remap/miniaxe_via.hex)
+3. QMK Toolboxを起動し、ファームウェアを"Local file"へドラッグ＆ドロップするか、"Open"をクリックしてファームウェアのファイルを指定します。
+   ![qmk_toolsbox_open.png](images/qmk_toolbox_open.png)
+4. MiniAxeにUSBケーブルを接続し、リセットスイッチを押してブートローダモードにすると、QMK Toolboxに以下のように表示されます。
+    ```
+    Atmel DFU device connected (libusb0): Atmel Corp. ATmega32U4 (03EB:2FF4:0000)
+    ```
+5. QMK Toolboxの"Flash"ボタンをクリックすると、書き込みが始まります。
+    ```
+    Attempting to flash, please don't remove device
+    > dfu-programmer.exe atmega32u4 erase --force
+    > Erasing flash...  Success
+    > Checking memory from 0x0 to 0x6FFF...  Empty.
+    > dfu-programmer.exe atmega32u4 flash --force "C:\Temp\miniaxe_via.hex"
+    > 0%                            100%  Programming 0x4D00 bytes...
+    > [>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>]  Success
+    > 0%                            100%  Reading 0x7000 bytes...
+    > [>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>]  Success
+    > Validating...  Success
+    > 0x4D00 bytes written into 0x7000 bytes memory (68.75%).
+    > dfu-programmer.exe atmega32u4 reset
+    ```
+6. 書き込みが完了すると、以下のように表示されます。
+    ```
+    Flash complete
+    Atmel DFU device disconnected (libusb0): Atmel Corp. ATmega32U4 (03EB:2FF4:0000)
+    ```
+7. もう片方のMiniAxeにUSBケーブルを接続し、同様にファームウェアを書き込んでください。
 
-初めてファームウェアを書き込む場合は、リセットスイッチを押す必要はありません。
 
-ファームウェアをビルドする環境の構築は、[こちらのドキュメント](https://docs.qmk.fm/#/getting_started_build_tools)を参考にしてください。
+### QMK Firmwareをビルドしてファームウェアを書き込む
+
+1. QMKのリポジトリをクローンします。
+
+    [qmk_firmware](https://github.com/qmk/qmk_firmware)
+
+    Remap用のファームウェアを利用したい場合は、以下のリポジトリをクローンしてください。
+    [Kagizaraya's qmk_firmware](https://github.com/kagizaraya/qmk_remap)
+
+1. クローンしたら、ローカルリポジトリのディレクトリへ移動し、以下のコマンドを実行すると、ファームウェアを書き込むために待機状態になりますので、キーボードを接続してください。すでにキーボードが接続されている場合は、そのまま書き込みが始まります。
+
+    ~~~
+    $ make miniaxe:default:dfu
+    ~~~
+    
+    Remap用のファームウェアをビルドする場合は、以下のコマンドを実行します。
+
+    ~~~
+    $ make miniaxe:via:dfu
+    ~~~
+
+    初めてファームウェアを書き込む場合は、リセットスイッチを押す必要はありません。
+
+    ファームウェアをビルドする環境の構築は、[こちらのドキュメント](https://docs.qmk.fm/#/ja/newbs_getting_started)を参考にしてください。
+
+## Remapでキーマップを書き換える
+
+Remap対応のファームウェアを使用している場合は、[Remap](https://remap-keys.app/)を使ってキーマップを書き換えることができます。
+
+Remapの使い方は、以下の記事で大変分かりやすく解説されていますので、ぜひご参照ください。
+
+ [（初心者編）Remapを使ってキーマップを書き換えよう](https://salicylic-acid3.hatenablog.com/entry/remap-manual)
+
 
 ## 完成！
 これで完成です。おつかれさまでした。

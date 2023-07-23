@@ -175,23 +175,85 @@ If it is not recognized as a USB device, please double check the schematic to se
 2. Join the two halves with the male-male microUSB cable. Connect the microUSB port J2 on one side to J2 on the other side.
 
 ## Write firmware
-__For the soldered kit, the default keymap firmware is already written.__
 
-The firmware uses QMK. Please clone the following repository.
+__For the pre-soldered kit, this step is not necessary since the default keymap has firmware has already been written.__
 
-[qmk_firmware](https://github.com/qmk/qmk_firmware)
+There are two ways to write firmware If you do not need to customize the firmware other than rewriting the keymap, the method using QMK Toolbox is easy and recommended.
 
-After cloning, move to the directory of the local repository and execute the following command. 
+### Writing firmware using the QMK Toolbox
 
-~~~
-$ make miniaxe:default:dfu
-~~~
+1. Download and install the latest version of [QMK Toolbox](https://github.com/qmk/qmk_toolbox/releases).
+    For Windows version, download either qmk_toolsbox.exe (application only) or qmk_toolbox_install.exe (installer included).
+    For Mac, download either QMK.Toolbox.app.zip (application only) or QMK.Toolbox.pkg (installer included).
 
-After building, the program will enter a standby state. When that happens, please connect the keyboard. If the keyboard is already connected, writing will begin. 
-It is not necessary to press the reset switch to write the firmware for the first time.
-Repeat for the other side of the keyboard.
+1. Download the MiniAxe firmware from the following link
+    [miniaxe_via.hex](https://github.com/kagizaraya/miniaxe_build_guide/releases/download/remap/miniaxe_via.hex)
 
-Please refer to [this document](https://docs.qmk.fm/#/getting_started_build_tools) for building the environment for building firmware.
+1. Start QMK Toolbox and drag & drop the firmware to "Local file" or click "Open" to specify the firmware file. Click "Open" to specify the firmware file. 
+   ![qmk_toolbox_open.png](images/qmk_toolbox_open.png)
+
+1. Connect the USB cable to the MiniAxe, press the reset switch to enter bootloader mode, and the QMK Toolbox will display the following.
+    ```
+    Atmel DFU device connected (libusb0): Atmel Corp. ATmega32U4 (03EB:2FF4:0000)
+    ```
+
+1. Click the "Flash" button in the QMK Toolbox to start writing.
+    ```
+    Attempting to flash, please don't remove device
+    > dfu-programmer.exe atmega32u4 erase --force
+    > Erasing flash...  Success
+    > Checking memory from 0x0 to 0x6FFF...  Empty.
+    > dfu-programmer.exe atmega32u4 flash --force "C:\Temp\miniaxe_via.hex"
+    > 0% 100% Programming 0x4D00 bytes...
+    > [>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] Success
+    > 0% 100% Reading 0x7000 bytes...
+    > [>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] Success
+    > Validating...  Success
+    > 0x4D00 bytes written into 0x7000 bytes memory (68.75%).
+    > dfu-programmer.exe atmega32u4 reset
+   ```
+
+1. When the write completes, you will see the following: 
+    ```
+    Flash complete
+    Atmel DFU device disconnected (libusb0): Atmel Corp.
+    ```
+
+1. Connect the USB cable to the other MiniAxe and write the firmware in the same way.
+
+### Build QMK Firmware and write firmware
+
+1. Clone the QMK repository.
+
+    [qmk_firmware](https://github.com/qmk/qmk_firmware)
+
+    If you want to use firmware for Remap, clone the following repository.
+    [Kagizaraya's qmk_firmware](https://github.com/kagizaraya/qmk_remap)
+
+1. After cloning, go to the directory of the local repository and execute the following command, then connect a keyboard as it will be waiting for the firmware to be written. If the keyboard is already connected, the writing will start directly.
+
+    ~~~
+    $ make miniaxe:default:dfu
+    ~~~
+    
+    To build firmware for Remap, execute the following command.
+
+    ~~~
+    $ make miniaxe:via:dfu
+    ~~~
+
+    If you are writing firmware for the first time, you do not need to press the reset switch.
+
+    Please refer to [this document](https://docs.qmk.fm/#/ja/newbs_getting_started) to build the environment to build the firmware.
+
+## Rewrite keymap with Remap
+
+If you are using firmware that supports Remap, you can rewrite the keymap using [Remap](https://remap-keys.app/).
+
+Please refer to the following article for a very clear explanation of how to use Remap.
+
+[Let's rewrite keymap using Remap (Beginner's Edition)](https://salicylic-acid3.hatenablog.com/entry/remap-manual)
+
 
 ## Completed!
 Congratulations!
